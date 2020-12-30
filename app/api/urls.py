@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import article_list
+from .views import GenericAPIView
  
 urlpatterns = [
  
-    path('article/', article_list),
- 
+    path('generic/article/<int:id>/', GenericAPIView.as_view()),
  
 ]
